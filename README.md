@@ -1,6 +1,6 @@
-# Desarrollo Web en Entorno Servidor
+# Desarrollo de Aplicaciones Web
 
-Este repositorio es de los ejercicios desarrollados por Jonatan García Barrera durante el 2º curso de DAW en la asignatura de Desarrollo Web en Entorno Servidor 
+Este repositorio es de los ejercicios desarrollados por Jonatan García Barrera durante el 2º curso de DAW.
 
 ## LICENSE
 
