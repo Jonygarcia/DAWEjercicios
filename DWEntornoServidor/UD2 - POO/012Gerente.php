@@ -1,0 +1,19 @@
+<?php
+/*012Trabajador.php: Copia las clases del ejercicio anterior y modifícalas.
+Cambia la estructura de clases conforme al gráfico respetando todos los métodos que 
+ya están hechos. Trabajador es una clase abstracta que ahora almacena los teléfonos y 
+donde calcularSueldo es un método abstracto de manera que:
+El sueldo de un Empleado se calcula a partir de las horas trabajadas y lo que cobra por 
+hora. Para los Gerentes, su sueldo se incrementa porcentualmente en base a su edad: 
+salario + salario*edad/100*/
+
+include_once('012Trabajador.php');
+
+class Gerente extends Trabajador{
+    private $salario;
+
+    public function cacularSueldo()
+    {
+        $this->salario = $this->salario * $this->edad/100;
+    }
+}
