@@ -138,7 +138,9 @@ include_once ('013Gerente.php');
 include_once ('013Empresa.php');
 
 $gerente1 = new Gerente("Paco", "Nunez Mora", 33);
+$gerente1->setSalario(1200);
 $empleado1 = new Empleado("Carlos", "Pérez Junco", 25);
+$empleado1->setHorasTrabajadas(40)->setPrecioPorHora(9);
 
 $empresa = new Empresa();
 $empresa->setDireccion("LamismadeIlerna");
@@ -148,4 +150,6 @@ $empresa->anyadirTrabajador($gerente1);
 $empresa->anyadirTrabajador($empleado1);
 
 $empresa->listarTrabajadoresHtml();
+
+echo $empresa->getCosteNominas();
 */

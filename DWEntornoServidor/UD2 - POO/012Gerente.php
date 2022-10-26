@@ -12,8 +12,8 @@ include_once('012Trabajador.php');
 class Gerente extends Trabajador{
     private $salario;
 
-    public function cacularSueldo()
+    public function calcularSueldo()
     {
-        $this->salario = $this->salario * $this->edad/100;
+        return $this->salario = ($this->salario * $this->edad) / 100;
     }
 }

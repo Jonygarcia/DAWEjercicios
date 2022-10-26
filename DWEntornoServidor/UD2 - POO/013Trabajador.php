@@ -17,7 +17,7 @@ abstract class Trabajador extends Persona
 {
     private $telefonos = [];
 
-    abstract function cacularSueldo();
+    abstract function calcularSueldo();
     public function debePagarImpuestos()
     {
     }

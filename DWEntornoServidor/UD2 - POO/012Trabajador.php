@@ -37,7 +37,7 @@ abstract class Trabajador extends Persona
         }
     }
 
-    abstract function cacularSueldo();
+    abstract function calcularSueldo();
 
     public function debePagarImpuestos()
     {

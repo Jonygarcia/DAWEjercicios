@@ -18,8 +18,32 @@ class Empleado extends Trabajador
     private $horasTrabajadas;
     private $precioPorHora;
 
-    public function cacularSueldo()
+    public function calcularSueldo()
     {
         return $this->horasTrabajadas * $this->precioPorHora;
+    }
+
+    public function getPrecioPorHora()
+    {
+        return $this->precioPorHora;
+    }
+
+    public function setPrecioPorHora($precioPorHora)
+    {
+        $this->precioPorHora = $precioPorHora;
+
+        return $this;
+    }
+
+    public function getHorasTrabajadas()
+    {
+        return $this->horasTrabajadas;
+    }
+
+    public function setHorasTrabajadas($horasTrabajadas)
+    {
+        $this->horasTrabajadas = $horasTrabajadas;
+
+        return $this;
     }
 }

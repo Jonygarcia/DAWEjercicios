@@ -13,13 +13,15 @@ método calcularSueldo().*/
 
 include_once('013Trabajador.php');
 include_once('013Persona.php');
+include_once('013Gerente.php');
+include_once('013Empleado.php');
 
 
 class Empresa
 {
     private $nombre;
     private $direccion;
-    private $trabajadores = [];   
+    private $trabajadores = [];
 
     public function getNombre()
     {
@@ -52,8 +54,8 @@ class Empresa
     }
 
     public function listarTrabajadoresHtml()
-    {   
-        foreach ($this->trabajadores as $trabajador){
+    {
+        foreach ($this->trabajadores as $trabajador) {
             Trabajador::toHtml($trabajador);
         }
     }
@@ -61,8 +63,10 @@ class Empresa
     public function getCosteNominas()
     {
         $totalNominas = 0;
-        foreach ($this->trabajadores as $cargo => $trabajador) {
-            $totalNominas += $trabajador->calcularSueldo();
+        foreach ($this->trabajadores as $trabajador) {
+            $nomina = $trabajador->calcularSueldo();
+            $totalNominas += $nomina;
         }
+        return $totalNominas;
     }
 }
