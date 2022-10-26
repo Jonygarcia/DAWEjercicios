@@ -22,8 +22,30 @@ abstract class Trabajador extends Persona
     {
     }
 
-    public static function toHtml(Persona $p){
-        echo "<p>".$p->getNombreCompleto()."</p>
-                <p>".$p->getEdad()."</p>";
+    public function anyadirTelefono(int $telefono)
+    {
+        array_push($this->telefonos, $telefono);
+    }
+
+    public function listarTelefonos()
+    {
+        $cadenatlf = "";
+        foreach ($this->telefonos as $id => $numero) {
+            $cadenatlf .= ($id == 0) ? $numero : ", " . $numero;
+        }
+
+        return $cadenatlf;
+    }
+
+    public function vaciarTelefonos()
+    {
+        while (count($this->telefonos) != 0) {
+            array_shift($this->telefonos);
+        }
+    }
+
+    public static function toHtml(Persona $p)
+    {
+        echo "<p>" . $p->getNombre() . " " . $p->getApellidos() . "</p>";
     }
 }

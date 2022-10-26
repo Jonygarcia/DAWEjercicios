@@ -13,7 +13,32 @@ abstract class Trabajador extends Persona
 {
     private $telefonos = [];
 
+    private const SUELDO_TOPE = 3333;
+
+    public function anyadirTelefono(int $telefono)
+    {
+        array_push($this->telefonos, $telefono);
+    }
+
+    public function listarTelefonos()
+    {
+        $cadenatlf = "";
+        foreach ($this->telefonos as $id => $numero) {
+            $cadenatlf .= ($id == 0) ? $numero : ", " . $numero;
+        }
+
+        return $cadenatlf;
+    }
+
+    public function vaciarTelefonos() 
+    {
+        while (count($this->telefonos) != 0) {
+            array_shift($this->telefonos);
+        }
+    }
+
     abstract function cacularSueldo();
+
     public function debePagarImpuestos()
     {
     }

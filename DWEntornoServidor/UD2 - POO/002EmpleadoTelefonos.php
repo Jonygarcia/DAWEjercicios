@@ -60,12 +60,12 @@ class Empleado
         return ($this->sueldo > 3333) ? true : false;
     }
 
-    public function anyadirTelefono(int $telefono)
+    public function anyadirTelefono(int $telefono) : void
     {
         array_push($this->telefonos, $telefono);
     }
 
-    public function listarTelefonos()
+    public function listarTelefonos() : string
     {
         $cadenatlf = "";
         foreach ($this->telefonos as $id => $numero) {
@@ -75,7 +75,7 @@ class Empleado
         return $cadenatlf;
     }
 
-    public function vaciarTelefonos()
+    public function vaciarTelefonos() : void
     {
         while (count($this->telefonos) != 0) {
             array_shift($this->telefonos);

@@ -48,12 +48,12 @@ class Empleado
         return $this;
     }
 
-    public function getNombreCompleto()
+    public function getNombreCompleto() : String
     {
         return $this->nombre . " " . $this->apellidos;
     }
 
-    public function debePagarImpuestos()
+    public function debePagarImpuestos() : bool
     {
         return ($this->sueldo > 3333) ? true : false;
     }

@@ -14,11 +14,12 @@ método calcularSueldo().*/
 include_once('013Trabajador.php');
 include_once('013Persona.php');
 
+
 class Empresa
 {
     private $nombre;
     private $direccion;
-    private $trabajadores = [$this->Empleado => [], $this->Gerente => []];   
+    private $trabajadores = [];   
 
     public function getNombre()
     {
@@ -52,11 +53,9 @@ class Empresa
 
     public function listarTrabajadoresHtml()
     {   
-        foreach ($this->trabajadores as $tipo => $nombre){
-            foreach ($nombre as $tipoEmpleados){
-                Trabajador::toHtml($tipoEmpleados);
-            }
-        }  
+        foreach ($this->trabajadores as $trabajador){
+            Trabajador::toHtml($trabajador);
+        }
     }
 
     public function getCosteNominas()

@@ -128,21 +128,23 @@ echo $persona1->__toString() . "<br>";
 echo $empleado1->__toString();
 */
 
+// 012 
+
+
 // 013 Pruebas
 /*
 include_once ('013Empleado.php');
 include_once ('013Gerente.php');
 include_once ('013Empresa.php');
 
-$gerente1 = new Gerente("Paco", "Nuñez Mora");
-$empleado1 = new Empleado("Carlos", "Pérez Junco");
+$gerente1 = new Gerente("Paco", "Nunez Mora", 33);
+$empleado1 = new Empleado("Carlos", "Pérez Junco", 25);
 
 $empresa = new Empresa();
 $empresa->setDireccion("LamismadeIlerna");
 $empresa->setNombre("VayaRuina");
 
 $empresa->anyadirTrabajador($gerente1);
-
 $empresa->anyadirTrabajador($empleado1);
 
 $empresa->listarTrabajadoresHtml();

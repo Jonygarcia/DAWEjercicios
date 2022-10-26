@@ -60,7 +60,7 @@ class Empleado
         return $cadenatlf;
     }
 
-    public function vaciarTelefonos()
+    public function vaciarTelefonos() 
     {
         while (count($this->telefonos) != 0) {
             array_shift($this->telefonos);
