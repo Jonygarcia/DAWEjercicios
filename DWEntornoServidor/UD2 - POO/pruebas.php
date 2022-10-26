@@ -153,3 +153,27 @@ $empresa->listarTrabajadoresHtml();
 
 echo $empresa->getCosteNominas();
 */
+
+// Prueba 014
+
+include_once ('014EmpleadoI.php');
+include_once ('014GerenteI.php');
+include_once ('014EmpresaI.php');
+
+$gerente1 = new Gerente("Paco", "Nunez Mora", 33);
+$gerente1->setSalario(1200);
+$empleado1 = new Empleado("Carlos", "Pérez Junco", 25);
+$empleado1->setHorasTrabajadas(40)->setPrecioPorHora(9);
+
+$empresa = new Empresa();
+$empresa->setDireccion("LamismadeIlerna");
+$empresa->setNombre("VayaRuina");
+
+$empresa->anyadirTrabajador($gerente1);
+$empresa->anyadirTrabajador($empleado1);
+
+echo $empresa->toJSON() . "<br>";
+echo $gerente1->toJSON() . "<br>";
+echo $empleado1->toJSON() . "<br>";
+
+echo $empresa->toSerialize();
