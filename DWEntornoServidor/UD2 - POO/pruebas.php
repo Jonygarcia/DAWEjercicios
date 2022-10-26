@@ -129,6 +129,7 @@ echo $empleado1->__toString();
 */
 
 // 013 Pruebas
+/*
 include_once ('013Empleado.php');
 include_once ('013Gerente.php');
 include_once ('013Empresa.php');
@@ -145,4 +146,4 @@ $empresa->anyadirTrabajador($gerente1);
 $empresa->anyadirTrabajador($empleado1);
 
 $empresa->listarTrabajadoresHtml();
-
+*/
