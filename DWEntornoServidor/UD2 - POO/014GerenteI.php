@@ -1,5 +1,4 @@
 <?php 
-use function MongoDB\BSON\toJSON;
 /* 014EmpresaI.php: Copia las clases del ejercicio anterior y modifícalas.
 Crea un interfaz JSerializable, de manera que ofrezca los métodos:
 toJSON(): string → utiliza la función json_encode(mixed). Ten en cuenta que como 
