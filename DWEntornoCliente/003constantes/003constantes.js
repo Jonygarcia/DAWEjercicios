@@ -11,5 +11,5 @@ const CUMPLE = '18.04.1982'; // ¿cumple en mayúsculas?
 const AGE = someCode(CUMPLE); // ¿age en mayúsculas?*/
 "use strict";
 
-const CUMPLE = '18.04.1982'; // CUMPLE quedaría en mayúsculas porque no va a cambiar su valor.
+const CUMPLE = "18.04.1982"; // CUMPLE quedaría en mayúsculas porque no va a cambiar su valor.
 const age = someCode(CUMPLE); // age quedaría en minúsculas porque puede cambiar su valor.

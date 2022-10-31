@@ -14,7 +14,7 @@ undefined + 1
 " \t \n" - 2*/
 "use strict";
 
-alert("" + 1 + 0) // 10 -> Muestra el 10 como String concatenando 1 y 0
+alert("" + 1 + 0); // 10 -> Muestra el 10 como String concatenando 1 y 0
 alert("" - 1 + 0); // -1 -> Muestra el -1 como String
 alert(true + false); // 1 -> Toma el valor del primero (true)
 alert(6 / "3"); // 2 -> Se convierten a valores numéricos al usar una función matemática y se realiza la división
