@@ -10,7 +10,6 @@ let userText = prompt("Introduzca la frase para pasarla al modo cani:");
 document.write(toCani(userText));
 
 function toCani(userText) {
-    let capitalizar = 0;
     let nuevaCadena = "";
 
     for (let i = 0; i < userText.length; i++) {
