@@ -13,7 +13,9 @@ function toCani(userText) {
     let nuevaCadena = "";
 
     for (let i = 0; i < userText.length; i++) {
-        if (userText[i] != "" && userText[i] != null && userText[i] != " ") {
+        if (userText[i] == " ") {
+            nuevaCadena += i == userText.length - 1 ? "HHH" : " ";
+        } else {
             if (i % 2 == 0) {
                 if (userText[i] == "c" || userText[i] == "C") {
                     nuevaCadena += "K";
@@ -28,10 +30,6 @@ function toCani(userText) {
             }
 
             if (i == userText.length - 1) nuevaCadena += "HHH";
-        } else if (userText[i] == " ") {
-            nuevaCadena += i == userText.length - 1 ? "HHH" : " ";
-        } else {
-            nuevaCadena += userText[i];
         }
     }
 
