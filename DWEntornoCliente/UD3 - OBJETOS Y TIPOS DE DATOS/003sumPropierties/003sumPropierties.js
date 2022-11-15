@@ -11,8 +11,25 @@ resultado será 0.*/
 "use strict";
 
 let salaries = {
-    Harry: 100,
-    Ron: 160,
-    Hermione: 130,
+  Harry: 100,
+  Ron: 160,
+  Hermione: 130,
 };
 
+let sum = sumarObj(salaries);
+
+alert(sum);
+
+function sumarObj(obj) {
+  let suma = 0;
+
+  if (Object.keys(obj).length === 0) {
+    return 0;
+  } else {
+    for (let key in obj) {
+      suma += obj[key];
+    }
+  }
+
+  return suma;
+}
